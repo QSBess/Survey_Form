@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Customer Satisfaction Survey</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+	body {
+		font-family: Roboto, Helvetica;
+		background-image: radial-gradient(#2E665F, #2A2B2D);
+	}
+	#survey-header {
+		color: #55AA55;
+		text-align: center;
+	}
+	#survey-form {
+		text-align: center;
+	}
+	#customer-div {
+		color: #55AA55;		
+	}
+	.customer-info {
+		padding: 5px;
+	}	
+	input{
+		padding: 5px;
+		margin-right: 10px;
+	}
+	ul {
+		list-style-type: none;
+		padding: 5%;
+		margin: 0;
+	}
+	.referral, .improvement {
+		padding: 3px;
+	}
+	.rating {
+		padding: 10px;
+	}
+	#satisfaction-div {
+		display: grid;
+		display: -ms-grid;
+		grid-template-columns: repeat(2, 50%);
+		-ms-grid-columns: (50%)[2];
+		grid-auto-rows: minmax(100px, auto);
+		justify-content: center;
+		width: 75%;
+		height: auto;
+		margin: auto;
+		margin-top: 5px;
+	}
+	@media (max-width: 600px) {
+		#satisfaction-div {
+			display: block;
+		}
+	}
+	#referral-info {
+		background-color: #C2D1AF;
+		grid-column: 1;
+		-ms-grid-column: 1;
+		grid-row: 1;
+		-ms-grid-row: 1;
+		padding: 5%;
+		margin: 5px;
+		border: 3px solid #55AA55;
+	}
+	#improvement-info {
+		background-color: #C2D1AF;
+		grid-column: 2;
+		-ms-grid-column: 2;
+		grid-row: 1;
+		-ms-grid-row: 1;
+		padding: 5%;
+		margin: 5px;
+		border: 3px solid #55AA55;
+	}
+	#rating-info {
+		background-color: #C2D1AF;
+		grid-column: 1;
+		-ms-grid-column: 1;
+		grid-row: 2;
+		-ms-grid-row: 2;
+		padding: 5%;
+		margin: 5px;		
+		border: 3px solid #55AA55;
+	}
+	#comments-info {
+		background-color: #C2D1AF;
+		grid-column: 2;
+		-ms-grid-column: 2;
+		grid-row: 2;
+		-ms-grid-row: 2;
+		padding: 5%;
+		margin: 5px;
+		border: 3px solid #55AA55;
+	}
+	@media (max-width: 600px) {
+		#referral-info, #improvement-info,
+		#rating-info, #comments-info {
+			margin-bottom: 10px;
+		}
+	}
+	#comments {
+		width: 50%;
+		height: 100px;
+		margin-top: 5px;
+	}
+	#submit-div {
+		padding: 10px;
+	}
+	#submit {
+		font-size: 100%;
+		padding: 5px;
+	}
+</style>
+</head>
+<body>
+<div id="survey-header">
+	<h1 id="title">Customer Satisfaction Survey</h1>
+	<p id="description">Please take the time to fill out our customer satisfaction survey.</p>
+</div>
+<form id="survey-form">
+<div id="customer-div">
+	<div class="customer-info">
+	<label for="name" id="name-label">Name:</label>
+		<input type="text" name="name" id="name" required placeholder="Enter your name">
+	</div>
+	<div class="customer-info">
+	<label for="email" id="email-label">Email:</label>
+		<input  type="email" name="email" id="email" required placeholder="Enter your email address">
+	</div>
+	<div class="customer-info">
+	<label for="age" id="number-label">Age:</label>
+		<input type="number" min="18" max="110" name="age" id="number" placeholder="18 & up">
+	</div>
+</div>
+<div id="satisfaction-div">	
+	<div id="referral-info">	
+	<label for="referral">How did you hear about us?</label>
+	<ul>
+		<li class="referral"><label for="tv"><input type="radio" id="tv" name="referral" value="tv">TV</label></li>
+		<li class="referral"><label for="internet"><input type="radio" name="referral" id="internet" value="internet">Internet</label></li>
+		<li class="referral"><label for="radio"><input type="radio" name="referral" id="radio" value="radio">Radio</label></li>
+		<li class="referral"><label for="newspaper"><input type="radio" name="referral" id="newspaper" value="newspaper">Newspaper</label></li>
+		<li class="referral"><label for="magazine"><input type="radio" name="referral" id="magazine" value="magazine">Magazine</label></li>
+		<li class="referral"><label for="billboard"><input type="radio" name="referral" id="billboard" value="billboard">Billboard</label></li>
+		<li class="referral"><label for="friend"><input type="radio" name="referral" id="friend" value="friend">Friend</label></li>
+		<li class="referral"><label for="other"><input type="radio" name="referral" id="other"  value="other">Other</label></li>
+	</ul>
+	</div>
+	<div  id="improvement-info">
+	<label for="improvement">Recommend areas of improvement:</label>
+	<ul>	
+		<li class="improvement"><label for="efficiency"><input type="checkbox" name="improvement" id="efficiency" value="efficiency">Efficiency</label></li>
+		<li class="improvement"><label for="communication"><input type="checkbox" name="improvement" id="communication" value="communication">Communication</label></li>
+		<li class="improvement"><label for="courtesy"><input type="checkbox" name="improvement" id="courtesy" value="courtesy">Courtesy</label></li>
+		<li class="improvement"><label for="focus"><input type="checkbox" name="improvement" id="focus" value="focus">Individual focus</label></li>
+		<li class="improvement"><label for="listening"><input type="checkbox" name="improvement" id="listening" value="listening">Active listening</label></li>
+		<li class="improvement"><label for="knowledge"><input type="checkbox" name="improvement" id="knowledge" value="knowledge">Knowledgeability</label></li>
+		<li class="improvement"><label for="patience"><input type="checkbox" name="improvement" id="patience" value="patience">Patience</label></li>
+		<li class="improvement"><label for="probsolving"><input type="checkbox" name="improvement" id="probsolving" value="probsolving">Problem solving</label></li>
+		<li class="improvement"><label for="needs"><input type="checkbox" name="improvement" id="needs" value="needs">Needs met</label></li>
+		<li class="improvement"><label for="enjoyment"><input type="checkbox" name="improvement" id="enjoyment" value="enjoyment">Enjoyment</label></li>
+	</ul>
+	</div>
+	<div id="rating-info">
+	<ul>
+	<li class="rating"><label for="dropdown">Rate your satisfaction:</label>
+		<select id="dropdown" name="satisfaction" class="dropdown">
+			<option disabled value>Select a rating</option>
+			<option value="excellent">Excellent</option>
+			<option value="verygood">Very Good</option>
+			<option value="good">Good</option>
+			<option value="fair">Fair</option>
+			<option value="poor">Poor</option>
+		</select></li>
+	<li class="rating"><label for="repeat">How likely are you to be a repeat customer?</label>
+		<select id="repeat" name="repeat" class="dropdown">
+			<option disabled value>Select an answer</option>
+			<option value="definitely">Definitely</option>
+			<option value="verylikely">Very likely</option>
+			<option value="likely">Likely</option>
+			<option value="maybe">Maybe</option>
+			<option value="notlikely">Not likely</option>
+		</select></li>
+	<li class="rating"><label for="recommend">How likely are you to recommend us to a friend?</label>
+		<select id="recommend" name="recommend" class="dropdown">
+			<option disabled value>Select an answer</option>
+			<option value="definitely">Definitely</option>
+			<option value="verylikely">Very likely</option>
+			<option value="likely">Likely</option>
+			<option value="maybe">Maybe</option>
+			<option value="notlikely">Not likely</option>
+		</select></li>
+	</ul>
+	</div>	
+	<div  id="comments-info">
+	<label for="comments">Additional comments:</label><br>
+		<textarea id="comments" name="comments">Enter comments...</textarea>
+	</div>
+</div>
+<div id="submit-div">	
+	<button id="submit" type="submit">Submit</button>
+</div>
+</form>
+</body>
+</html>
