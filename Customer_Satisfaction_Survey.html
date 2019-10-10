@@ -119,7 +119,7 @@
 	<h1 id="title">Customer Satisfaction Survey</h1>
 	<p id="description">Please take the time to fill out our customer satisfaction survey.</p>
 </div>
-<form id="survey-form">
+<form id="survey-form" onsubmit="return getRating()">
 <div id="customer-div">
 	<div class="customer-info">
 	<label for="name" id="name-label">Name:</label>
@@ -196,12 +196,23 @@
 	</div>	
 	<div  id="comments-info">
 	<label for="comments">Additional comments:</label><br>
-		<textarea id="comments" name="comments">Enter comments...</textarea>
+		<textarea id="comments" name="comments"></textarea>
 	</div>
 </div>
 <div id="submit-div">	
 	<button id="submit" type="submit">Submit</button>
 </div>
 </form>
+	<script type="text/javascript"> 
+	function getRating(e) {
+		var rating = document.getElementById("dropdown").value;
+		var comments = document.getElementById("comments").value;
+		
+		if (rating==="Poor" && comments===""){
+			alert ("Please provide additional comments, so we can better the customer experience.");
+			return false;
+		}
+	}
+</script>
 </body>
 </html>
