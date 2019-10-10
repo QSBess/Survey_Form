@@ -168,29 +168,29 @@
 	<li class="rating"><label for="dropdown">Rate your satisfaction:</label>
 		<select id="dropdown" name="satisfaction" class="dropdown">
 			<option disabled value>Select a rating</option>
-			<option value="excellent">Excellent</option>
-			<option value="verygood">Very Good</option>
-			<option value="good">Good</option>
-			<option value="fair">Fair</option>
-			<option value="poor">Poor</option>
+			<option value="Excellent">Excellent</option>
+			<option value="Very Good">Very Good</option>
+			<option value="Good">Good</option>
+			<option value="Fair">Fair</option>
+			<option value="Poor">Poor</option>
 		</select></li>
 	<li class="rating"><label for="repeat">How likely are you to be a repeat customer?</label>
 		<select id="repeat" name="repeat" class="dropdown">
 			<option disabled value>Select an answer</option>
-			<option value="definitely">Definitely</option>
-			<option value="verylikely">Very likely</option>
-			<option value="likely">Likely</option>
-			<option value="maybe">Maybe</option>
-			<option value="notlikely">Not likely</option>
+			<option value="Definitely">Definitely</option>
+			<option value="Very Likely">Very Likely</option>
+			<option value="Likely">Likely</option>
+			<option value="Maybe">Maybe</option>
+			<option value="Not Likely">Not Likely</option>
 		</select></li>
 	<li class="rating"><label for="recommend">How likely are you to recommend us to a friend?</label>
 		<select id="recommend" name="recommend" class="dropdown">
 			<option disabled value>Select an answer</option>
-			<option value="definitely">Definitely</option>
-			<option value="verylikely">Very likely</option>
-			<option value="likely">Likely</option>
-			<option value="maybe">Maybe</option>
-			<option value="notlikely">Not likely</option>
+			<option value="Definitely">Definitely</option>
+			<option value="Very Likely">Very Likely</option>
+			<option value="Likely">Likely</option>
+			<option value="Maybe">Maybe</option>
+			<option value="Not Likely">Not likely</option>
 		</select></li>
 	</ul>
 	</div>	
@@ -203,8 +203,8 @@
 	<button id="submit" type="submit">Submit</button>
 </div>
 </form>
-	<script type="text/javascript"> 
-	function getRating() {
+<script type="text/javascript"> 
+	function getRating(e) {
 		var rating = document.getElementById("dropdown").value;
 		var comments = document.getElementById("comments").value;
 		
